@@ -1,0 +1,21 @@
+{
+  "source_type": "A",
+  "sub_source": "SensorX",
+  "file_type": "CSV",
+  "ingested_at": "2025-07-22T12:00:00",
+  "metadata": {
+    "sensor_id": 1234,
+    "location": "Building 1"
+  },
+  "content": {
+    "normalized": {
+      "temp": 22.5,
+      "humidity": 60
+    },
+    "raw": "s3://minio/yourfile.csv",
+    "enriched": {
+      "anomaly_score": 0.05
+    }
+  }
+}
+ 
