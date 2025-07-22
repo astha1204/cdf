@@ -1,26 +1,29 @@
-# Metadata Ingestion API (FastAPI + MongoDB + MinIO)
+# 📦 Metadata Ingestion API (FastAPI + MongoDB)
 
-This project provides a FastAPI-based backend for ingesting file metadata (like CSV, JSON) into a MongoDB database, with optional file storage in MinIO.
+This project provides a lightweight backend API built with **FastAPI** to ingest and store metadata of uploaded files (like CSV, JSON, etc.) into **MongoDB**, using a well-defined schema.
 
-## Features
+---
 
-- Upload metadata of files (structured/unstructured)
-- Store metadata in MongoDB
-- Optional file storage in MinIO (S3 compatible)
-- Supports normalized, raw, and enriched content structure
+## ✅ Features
 
-## Technologies
+- Accepts file metadata as JSON payloads
+- Validates input using **Pydantic** models
+- Stores data in MongoDB with **schema validation**
+- Provides a basic GET endpoint to fetch all documents
 
-- 🐍 Python
-- ⚡ FastAPI
-- 🍃 MongoDB (local or cloud)
-- ☁️ MinIO (S3-compatible storage)
-- 🧪 Pydantic Schema Validation
+---
 
-## Installation
+## 🔧 Technologies Used
 
-1. Clone the repo:
+- ⚡ FastAPI – for creating high-performance REST APIs
+- 🍃 MongoDB Atlas – for storing structured metadata
+- 🧪 Pydantic – for schema validation and type enforcement
+- 🐍 Python – the core runtime
 
-```bash
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
+---
+## 📁 Folder Structure
+app/
+├── db.py # MongoDB connection + schema enforcement
+├── models.py # Pydantic models for metadata structure
+├── main.py # API route handlers (upload + get)
+main.py # FastAPI app entrypoint
